@@ -6,8 +6,8 @@
 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
 </div> */}
 //mainmenu
-let links = ["#", "#", "#", "#", "contact.html"];
-let pageNames = ["Home", "About Us", "Menu & Pricing", "Master Chefs", "Contact Us"];
+let links = ["index.html", "#aboutUs", "#products", "contact.html"];
+let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us"];
 
 var writeMenu = `<div class="navbar-nav ms-auto mx-lg-auto py-0">`
 for(let i=0; i<links.length; i++){
