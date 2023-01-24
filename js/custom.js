@@ -1,5 +1,5 @@
 //Globalno
-var path = window.location.pathname;
+var path = window.location.pathname.split("/").pop();
 
 let links = ["index.html", "#aboutUs", "#products", "contact.html"];
 let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us"];
@@ -12,7 +12,7 @@ writeMenu += `</div>`;
 document.querySelector("#navbarCollapse").innerHTML = writeMenu;
 
 //Indeks
-if(path =="/index.html" || path == "/"){
+if(path =="index.html" || path == ""){
 
     //Promena slike
     $("#aboutImageHover img").hover(function(){
@@ -61,10 +61,10 @@ if(path =="/index.html" || path == "/"){
     document.querySelector("#customerExp").innerHTML = customersExpirience;
 
     //Counter
-    $('[data-toggle="counter-up counter"]').counterUp({
-        delay: 5,
-        time: 1500
-    });
+    // $('[data-toggle="counter-up counter"]').counterUp({
+    //     delay: 5,
+    //     time: 1500
+    // });
 
     //Filter
     $("#cakeList ul li").click(function(){
@@ -107,7 +107,7 @@ if(path =="/index.html" || path == "/"){
 }
 
 //Kontakt
-if(path == "/contact.html"){
+if(path == "contact.html"){
 
     //Regularni izrazi
     var regMail = /^[a-z]+([\.]?[a-z]*[\d]*)*\@[a-z]+([\.]?[a-z]+)*(\.[a-z]{2,3})+$/
