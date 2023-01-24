@@ -6,7 +6,7 @@
 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
 </div> */}
 //mainmenu
-let links = ["#", "#", "#", "#", "#"];
+let links = ["#", "#", "#", "#", "contact.html"];
 let pageNames = ["Home", "About Us", "Menu & Pricing", "Master Chefs", "Contact Us"];
 
 var writeMenu = `<div class="navbar-nav ms-auto mx-lg-auto py-0">`
