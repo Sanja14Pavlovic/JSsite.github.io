@@ -61,12 +61,13 @@ if(path =="index.html" || path == ""){
     //Statistika
     let customerText= ["OUR EXPIRIENCE", "CAKE SPECALIST", "COMPLETE PROJECT", "HAPPY CLIENTS"]
     let customerCounter = ["9.5", "100", "4500", "5000"]
+    let customerIcon= ["bi bi-star","bi bi-arrow-up","bi bi-skip-start-circle","bi bi-star-fill"]
     var customersExpirience = "";
     for(let i=0; i<customerText.length; i++){
         customersExpirience += `<div class="col-lg-3 col-md-6">
                                 <div class="d-flex">
                                 <div class="bg-primary border-inner d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-star text-white"></i>
+                                    <i class="${customerIcon[i]}"></i>
                                 </div>
                                 <div class="ps-4">
                                     <h6 class="text-primary text-uppercase">${customerText[i]}</h6>
@@ -93,18 +94,6 @@ if(path =="index.html" || path == ""){
         $(this).siblings(".activeCard").removeClass("activeCard");
         $(this).addClass("activeCard");
     })
-
-    // // <!-- <li class="bir nav-link text-white bir">Birthday</li>
-    // // <li class="wed nav-link text-white wed">Wedding</li>
-    // // <li class="oth nav-link text-white oth">Other</li>
-    // // <li class="all nav-link text-white activeCard">All</li> -->
-    let filterName=["Birthrday", "Wedding","Other","All"];
-    let filterclass=["bir nav-link text-white bir", "wed nav-link text-white wed", "oth nav-link text-white oth", "all nav-link text-white activeCard"];
-    var writeFilter="";
-    for(let i=0; i<filterName.length; i++){
-        writeFilter+= `<li class="${filterclass[i]}">${filterName[i]}</li>`
-    }
-    document.querySelector("#cakeBar").innerHTML=writeFilter;
 
     var cakeImg = ["cake-1.jpg","bcake1.jpg","bcake2.jpg","bcake3.jpg","cake-2.jpg","wcake2.jpg","wcake3.jpg","cake-3.jpg","ccake1.jpg","ccake2.jpg","ccake3.jpg","ccake4.jpg"];
     var cakePrice = ["$99.99","$85.99","$58.99","$100","$55.90","$78.99","$79.99","$89.99","$100.00","$109.99","$90.99","$59.99"];
