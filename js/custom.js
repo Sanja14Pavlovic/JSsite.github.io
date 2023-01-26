@@ -21,7 +21,7 @@ document.querySelector("#navbarCollapse").innerHTML = writeMenu;
 
 
     let footerIcons= ["<i class='fa fa-sitemap'></i>", "<i class='fa-solid fa-robot'></i>", "<i class='fa-solid fa-file'></i>"];
-    let footerLinksIcon= ["sitemap.xml","robots.txt","dokumentacija.pdf"];
+    let footerLinksIcon= ["sitemap.xml","robots.txt","Dokumentacija.pdf"];
     var writeFooter= "";
     for(let i=0;i<footerIcons.length; i++){
         writeFooter+= `<a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="${footerLinksIcon[i]}">${footerIcons[i]}</a>`
