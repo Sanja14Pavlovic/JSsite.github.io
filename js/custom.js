@@ -2,7 +2,7 @@
 var path = window.location.pathname.split("/").pop();
 
 let links = ["index.html", "#aboutUs", "#products", "contact.html"];
-let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us And About Me"];
+let pageNames = ["Home", "About Us", "Menu", "Contact Us And About Me"];
 
 var writeMenu = `<div class="navbar-nav ms-auto mx-lg-auto py-0">`
 for(let i=0; i<links.length; i++){
@@ -10,14 +10,6 @@ for(let i=0; i<links.length; i++){
 }
 writeMenu += `</div>`;
 document.querySelector("#navbarCollapse").innerHTML = writeMenu;
-
-
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-    // <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
 
     let footerMenuText= ["Home", "About Us", "Menu", "Contact Us And About Me"];
     let footerMenuLink= ["index.html","#aboutUs", "#products", "contact.html"];
@@ -27,32 +19,14 @@ document.querySelector("#navbarCollapse").innerHTML = writeMenu;
     }
     document.querySelector("#footMenu").innerHTML=footerMenuWrite;
 
-      //futer
 
-    // <div class="d-flex mb-2">
-    //                         <i class="bi bi-geo-alt text-primary me-2"></i>
-    //                         <p class="mb-0">123 Street, New York, USA</p>
-    //                     </div>
-    //                     <div class="d-flex mb-2">
-    //                         <i class="bi bi-envelope-open text-primary me-2"></i>
-    //                         <p class="mb-0">info@example.com</p>
-    //                     </div>
-    //                     <div class="d-flex mb-2">
-    //                         <i class="bi bi-telephone text-primary me-2"></i>
-    //                         <p class="mb-0">+012 345 67890</p>
-    //                     </div>
-
-
-    // let footerText= ["123 Street, New York, USA", "nfo@example.com", "+012 345 67890"];
-    // let footerBi= ["bi-geo-alt","bi-envelope-open","bi-telephone"];
-    // var writeFooter= "";
-    // for(let i=0;i<footerText.length; i++){
-    //     writeFooter+= `<div class="d-flex mb-2">
-    //                             <i class="bi ${footerBi[i]} text-primary me-2"></i>
-    //                              <p class="mb-0">${footerText[i]}</p>
-    //                     </div>`
-    // }
-    // document.querySelector("#footerContact").innerHTML= writeFooter;
+    let footerIcons= ["<i class='fa fa-sitemap'></i>", "<i class='fa-solid fa-robot'></i>", "<i class='fa-solid fa-file'></i>"];
+    let footerLinksIcon= ["sitemap.xml","robots.txt","dokumentacija.pdf"];
+    var writeFooter= "";
+    for(let i=0;i<footerIcons.length; i++){
+        writeFooter+= `<a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="${footerLinksIcon[i]}">${footerIcons[i]}</a>`
+    }
+    document.querySelector("#footerContact").innerHTML= writeFooter;
 
 //Indeks
 if(path =="index.html" || path == ""){
@@ -120,7 +94,63 @@ if(path =="index.html" || path == ""){
         $(this).addClass("activeCard");
     })
 
+    // // <!-- <li class="bir nav-link text-white bir">Birthday</li>
+    // // <li class="wed nav-link text-white wed">Wedding</li>
+    // // <li class="oth nav-link text-white oth">Other</li>
+    // // <li class="all nav-link text-white activeCard">All</li> -->
+    let filterName=["Birthrday", "Wedding","Other","All"];
+    let filterclass=["bir nav-link text-white bir", "wed nav-link text-white wed", "oth nav-link text-white oth", "all nav-link text-white activeCard"];
+    var writeFilter="";
+    for(let i=0; i<filterName.length; i++){
+        writeFilter+= `<li class="${filterclass[i]}">${filterName[i]}</li>`
+    }
+    document.querySelector("#cakeBar").innerHTML=writeFilter;
 
+    var cakeImg = ["cake-1.jpg","bcake1.jpg","bcake2.jpg","bcake3.jpg","cake-2.jpg","wcake2.jpg","wcake3.jpg","cake-3.jpg","ccake1.jpg","ccake2.jpg","ccake3.jpg","ccake4.jpg"];
+    var cakePrice = ["$99.99","$85.99","$58.99","$100","$55.90","$78.99","$79.99","$89.99","$100.00","$109.99","$90.99","$59.99"];
+    var cakeType = ["Birthrday on 3 floor","Birthrday cace rose", "Birthrday cake flowers", "Birthrday cake chill",  "Wedding cake od 3 floor","Wedding cake od 2 floor","small wedding cake", "Custom cake chocolate", "Custom cake grafit","Custom cake city","Custom cake fruits","Custom cake like pancakes"];
+    var cakeClass=["bir","bir", "bir","bir", "wed", "wed", "wed", "oth", "oth", "oth", "oth", "oth"]
+    var cakeText = ["9/10","7/10","8.5/10","7.3/10","8.8/10","5.9/10","10/10","9.9/10","9.5/10","7.9/10","8.3/10","7.8/10"];
+    var cakeWrite = "";
+    for(let i=0; i < cakeImg.length; i++){
+        cakeWrite += `<div class="col-lg-6 ${cakeClass[i]} all">
+                             <div class="d-flex h-100">
+                                 <div class="flex-shrink-0">
+                                     <img class="img-fluid" src="img/${cakeImg[i]}" alt="" style="width: 150px; height: 85px;">
+                                     <h4 class="bg-dark text-primary p-2 m-0">${cakePrice[i]}</h4>
+                                 </div>
+                                 <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                     <h5 class="text-uppercase">${cakeType[i]}</h5>
+                                     <span>Customer expirience: </br>${cakeText[i]}</span>
+                                 </div>
+                             </div>
+                         </div>`
+    }
+    document.querySelector("#cardCakes").innerHTML = cakeWrite;
+
+    var clientImg = ["testimonial-1.jpg", "testimonial-2.jpg","testimonial-3.jpg","testimonial-4.jpg"];
+    var clientName = ["Sarah","John","Dave","Anna"];
+    var clientProf = ["Artist","Chrief","Photographer","Athelitics"];
+    var clientText = ["This place is awesome, I love food, I love people there it's really quiet and relaxing, u could even study there!", "I won't say u anything, u should go and see by yourself! 10/10!!","This is the place where I love to come to have good snack!","I love this place, this cakes are like haven for real!","This place is awesome, I love food, I love people there it's really quiet and relaxing, u could even study there!"];
+    var clientWrite = '<div class="row clientText clientActive">';
+    for(let i=0; i<clientImg.length; i++){
+        clientWrite += `<div class="col-5 bg-dark text-white border-inner p-4">
+                         <div class="d-flex align-items-center mb-3">
+                             <img class="img-fluid flex-shrink-0" src="img/${clientImg[i]}" style="width: 60px; height: 60px;">
+                             <div class="ps-3">
+                                 <h4 class="text-primary text-uppercase mb-1">${clientName[i]}</h4>
+                                 <span>${clientProf[i]}</span>
+                             </div>
+                         </div>
+                         <p class="mb-0">${clientText[i]}</p>
+                     </div>`;
+        if(i == 1){
+            clientWrite += `</div>
+                     <div class="row clientText">`
+        }
+    }
+    clientWrite += "</div>";
+    document.querySelector("#cardClients").innerHTML = clientWrite;
 
     //Citaj jos
     $("#btnRead").click(function(){
@@ -151,75 +181,25 @@ if(path =="index.html" || path == ""){
     }
 }
 
-{/* <div class="col-md-5 bg-dark text-white border-inner p-4">
-<div class="d-flex align-items-center mb-3">
-    <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-    <div class="ps-3">
-        <h4 class="text-primary text-uppercase mb-1">Client Name</h4>
-        <span>Profession</span>
-    </div>
-</div>
-<p class="mb-0">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-</p>
-</div>
-<div class="col-md-5 bg-dark text-white border-inner p-4">
-<div class="d-flex align-items-center mb-3">
-    <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;">
-    <div class="ps-3">
-        <h4 class="text-primary text-uppercase mb-1">Client Name</h4>
-        <span>Profession</span>
-    </div>
-</div>
-<p class="mb-0">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-</p>
-</div>
-</div>
-<div class="row clientText">
-<div class="col-5 bg-dark text-white border-inner p-4">
-<div class="d-flex align-items-center mb-3">
-    <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;">
-    <div class="ps-3">
-        <h4 class="text-primary text-uppercase mb-1">Client Name</h4>
-        <span>Profession</span>
-    </div>
-</div>
-<p class="mb-0">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-</p>
-</div>
-<div class="col-5 bg-dark text-white border-inner p-4">
-<div class="d-flex align-items-center mb-3">
-    <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;">
-    <div class="ps-3">
-        <h4 class="text-primary text-uppercase mb-1">Client Name</h4>
-        <span>Profession</span>
-    </div>
-</div>
-<p class="mb-0">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-</p>
-</div>
-</div>  */}
-
-// let cusPic= ["testimonial-3.jpg", "testimonial-1.jpg", "testimonial-4.jpg", "testimonial-2.jpg"]
-// let customerName= ["John", "Anna", "Sarah", "Michael"];
-// let customerText= ["I love this place, this cakes are like haven for real!", "This is the place where I love to come to have good snack!", "This place is awesome, I love food, I love people there it's really quiet and relaxing, u could even study there!", "I won't say u anything, u should go and see by yourself! 10/10!!" ];
-// var writeClients= "";
-// for(let y=0; y<customerName.length; y++){
-//     writeClients+= `<div class="col-5 bg-dark text-white border-inner p-4">
-//     <div class="d-flex align-items-center mb-3">
-//         <img class="img-fluid flex-shrink-0" src="img/${cusPic[y]}" style="width: 60px; height: 60px;">
-//         <div class="ps-3">
-//             <h4 class="text-primary text-uppercase mb-1">${customerName[y]}</h4>
-//             <span>Profession</span>
-//         </div>
-//     </div>
-//     <p class="mb-0">${customerText[y]}</p>
-//     </div>
-//     </div>`
-// }
-// document.querySelector("#customerS").innerHTML=writeClients;
-
 //Kontakt
 if(path == "contact.html"){
+
+    //card contact
+    let cardContactText=["Out office", "Email Us", "Call Us"];
+    let cardSpan=["15 Street, New York, USA","chessecake@gmail.com", "+381 648579725"];
+    let cardIcon=["bi bi-geo-alt fs-1 text-white", "bi bi-envelope-open fs-1 text-white", "bi bi-phone-vibrate fs-1 text-white" ];
+    var cardWrite = "";
+    for(let i=0; i<cardIcon.length; i++){
+        cardWrite += `<div class="col-lg-4 col-md-6">
+                         <div class="bg-primary border-inner text-center text-white p-5">
+                             <i class="${cardIcon[i]}"></i>
+                             <h6 class="text-uppercase my-2">${cardContactText[i]}</h6>
+                            <span>${cardSpan[i]}</span>
+                         </div>
+                     </div>`
+    }
+    document.querySelector("#iconsContacts").innerHTML=cardWrite;
+
     //Regularni izrazi
     var regMail = /^[a-z]+([\.]?[a-z]*[\d]*)*\@[a-z]+([\.]?[a-z]+)*(\.[a-z]{2,3})+$/
     var regName = /^([A-Z][a-z]{2,10})\s([A-Z][a-z]{3,15})$/
