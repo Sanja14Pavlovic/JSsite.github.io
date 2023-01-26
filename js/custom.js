@@ -1,7 +1,7 @@
 //Globalno
 var path = window.location.pathname.split("/").pop();
 
-let links = ["index.html", "../#aboutUs", "../#products", "contact.html"];
+let links = ["index.html", "#aboutUs", "#products", "contact.html"];
 let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us And About Me"];
 
 var writeMenu = `<div class="navbar-nav ms-auto mx-lg-auto py-0">`
