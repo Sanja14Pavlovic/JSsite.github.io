@@ -2,7 +2,7 @@
 var path = window.location.pathname.split("/").pop();
 
 let links = ["index.html", "#aboutUs", "#products", "contact.html"];
-let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us And Abous Me"];
+let pageNames = ["Home", "About Us", "Menu & Pricing", "Contact Us And About Me"];
 
 var writeMenu = `<div class="navbar-nav ms-auto mx-lg-auto py-0">`
 for(let i=0; i<links.length; i++){
@@ -10,6 +10,49 @@ for(let i=0; i<links.length; i++){
 }
 writeMenu += `</div>`;
 document.querySelector("#navbarCollapse").innerHTML = writeMenu;
+
+
+    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
+    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+    // <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+
+    let footerMenuText= ["Home", "About Us", "Menu", "Contact Us"];
+    let footerMenuLink= ["Index.html","#aboutUs", "#products", "contact.html"];
+    let footerMenuWrite="";
+    for(let i=0; i<footerMenuLink.length; i++){
+        footerMenuWrite+= `<a class="text-secondary mb-2" href="${footerMenuLink[i]}"><i class="bi bi-arrow-right text-primary me-2"></i>${footerMenuText[i]}</a>`
+    }
+    document.querySelector("#footMenu").innerHTML=footerMenuWrite;
+
+      //futer
+
+    // <div class="d-flex mb-2">
+    //                         <i class="bi bi-geo-alt text-primary me-2"></i>
+    //                         <p class="mb-0">123 Street, New York, USA</p>
+    //                     </div>
+    //                     <div class="d-flex mb-2">
+    //                         <i class="bi bi-envelope-open text-primary me-2"></i>
+    //                         <p class="mb-0">info@example.com</p>
+    //                     </div>
+    //                     <div class="d-flex mb-2">
+    //                         <i class="bi bi-telephone text-primary me-2"></i>
+    //                         <p class="mb-0">+012 345 67890</p>
+    //                     </div>
+
+    
+    let footerText= ["123 Street, New York, USA", "nfo@example.com", "+012 345 67890"];
+    let footerBi= ["bi-geo-alt","bi-envelope-open","bi-telephone"]
+    var writeFooter= "";
+    for(let i=0;i<footerText.length; i++){
+        writeFooter+= `<div class="d-flex mb-2">
+                                <i class="bi ${footerBi[i]} text-primary me-2"></i>
+                                 <p class="mb-0">${footerText[i]}</p>
+                        </div>`
+    }
+    document.querySelector("#footerContact").innerHTML= writeFooter;
 
 //Indeks
 if(path =="index.html" || path == ""){
@@ -311,43 +354,4 @@ function formCheck(reg,val){
         }
 }
 
-    //futer
-
-    // <div class="d-flex mb-2">
-    //                         <i class="bi bi-geo-alt text-primary me-2"></i>
-    //                         <p class="mb-0">123 Street, New York, USA</p>
-    //                     </div>
-    //                     <div class="d-flex mb-2">
-    //                         <i class="bi bi-envelope-open text-primary me-2"></i>
-    //                         <p class="mb-0">info@example.com</p>
-    //                     </div>
-    //                     <div class="d-flex mb-2">
-    //                         <i class="bi bi-telephone text-primary me-2"></i>
-    //                         <p class="mb-0">+012 345 67890</p>
-    //                     </div>
-
-    let footerText= ["123 Street, New York, USA", "nfo@example.com", "+012 345 67890"];
-    let footerBi= ["bi-geo-alt","bi-envelope-open","bi-telephone"]
-    var writeFooter= "";
-    for(let i=0;i<footerText.length; i++){
-        writeFooter+= `<div class="d-flex mb-2">
-                                <i class="bi ${footerBi[i]} text-primary me-2"></i>
-                                 <p class="mb-0">${footerText[i]}</p>
-                        </div>`
-    }
-    document.querySelector("#footerContact").innerHTML= writeFooter;
-
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-    // <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-    // <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-
-    let footerMenuText= ["Home", "About Us", "Menu", "Contact Us"];
-    let footerMenuLink= ["Index.html","#aboutUs", "#products", "contact.html"];
-    let footerMenuWrite="";
-    for(let i=0; i<footerMenuLink.length; i++){
-        footerMenuWrite+= `<a class="text-secondary mb-2" href="${footerMenuLink[i]}"><i class="bi bi-arrow-right text-primary me-2"></i>${footerMenuText[i]}</a>`
-    }
-    document.querySelector("#footMenu").innerHTML=footerMenuWrite;
+  
