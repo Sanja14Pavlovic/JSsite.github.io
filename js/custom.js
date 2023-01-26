@@ -20,7 +20,7 @@ document.querySelector("#navbarCollapse").innerHTML = writeMenu;
     // <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
 
     let footerMenuText= ["Home", "About Us", "Menu", "Contact Us And About Me"];
-    let footerMenuLink= ["Index.html","#aboutUs", "#products", "contact.html"];
+    let footerMenuLink= ["index.html","#aboutUs", "#products", "contact.html"];
     let footerMenuWrite="";
     for(let i=0; i<footerMenuLink.length; i++){
         footerMenuWrite+= `<a class="text-secondary mb-2" href="${footerMenuLink[i]}"><i class="bi bi-arrow-right text-primary me-2"></i>${footerMenuText[i]}</a>`
