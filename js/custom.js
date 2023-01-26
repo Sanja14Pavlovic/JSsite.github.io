@@ -96,18 +96,18 @@ if(path =="index.html" || path == ""){
                                 </div>
                                 <div class="ps-4">
                                     <h6 class="text-primary text-uppercase">${customerText[i]}</h6>
-                                    <h1 class="display-5 text-white mb-0" data-toggle="counter-up counter">${customerCounter[i]}</h1>
+                                    <h1 class="display-5 text-white mb-0" data-toggle="counter-up counter"">${customerCounter[i]}</h1>
                                 </div>
                             </div>
                         </div>`
     }
     document.querySelector("#customerExp").innerHTML = customersExpirience;
 
-    // Counter
+    //counter
     // $('[data-toggle="counter-up counter"]').counterUp({
     //     delay: 5,
     //     time: 1500
-    // });
+    //   });
 
     //Filter
     $("#cakeList ul li").click(function(){
