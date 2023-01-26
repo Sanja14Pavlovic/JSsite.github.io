@@ -136,20 +136,46 @@
                 <div class="col-lg-6">
                     <form>
                         <div class="row g-3">
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;">
+                            <div class="col-sm-6 formspace">
+                                <input type="text" id="addName" class="form-control bg-light border-0 px-4" placeholder="Name" style="height: 55px;">
+                                <p class="eColor eHide">Wrong name</p>
                             </div>
-                            <div class="col-sm-6">
-                                <input type="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;">
+                            <div class="col-sm-6 formspace">
+                                <input type="email" id="addMail"class="form-control bg-light border-0 px-4" placeholder="Email" style="height: 55px;">
+                                <p class="eColor eHide">Wrong mail</p>
                             </div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;">
+                            <div class="col-sm-6 msgtype formspace">
+                                <select id="addType">
+                                    <option value = 0 selected>Choose message type</option>
+                                    <option value = 1>Question</option>
+                                    <option value = 2>Sugesstion</option>
+                                    <option value = 3>Other</option>
+                                </select>
+                                <p class="eColor eHide">Choose bro</p>
                             </div>
-                            <div class="col-sm-12">
-                                <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message"></textarea>
+                            <div class="col-sm-6 formspace" id="radiotype">
+                                <div>
+                                    <input type="radio" id="noturgent" name="fast" value="Not Urgent"/>
+                                    <label for="noturgent">Not Urgent</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="urgent" name="fast" value="Urgent"/>
+                                    <label for="urgent">Urgent</label>
+                                </div>
+                                <p class="eColor eHide">Choose</p>
                             </div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary border-inner w-100 py-3" type="submit">Send Message</button>
+                            <div class="col-sm-12 formspace">
+                                <textarea id="addMsg" class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message"></textarea>
+                                <p class="eColor eHide">Wrong message</p>
+                            </div>
+                            <div class="col-sm-12 msgtype formspace">
+                                <input type="checkbox" id="agree" name="confirm" value="confirm"/>
+                                <label for="agree">I agree with privacy policy</label>
+                                <p class="eColor eHide">Agree</p>
+                            </div>
+                            <div class="col-sm-12 formspace">
+                                <input type="button" id="send" class="btn btn-primary border-inner w-100 py-3" value="Send Message"/>
+                                <p class="sColor sHide">uspesno</p>
                             </div>
                         </div>
                     </form>
@@ -196,13 +222,13 @@
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <h4 class="text-primary text-uppercase mb-4">Quick Links</h4>
-                            <div class="d-flex flex-column justify-content-start">
-                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <div class="d-flex flex-column justify-content-start" id="footMenu">
+                                <!-- <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
                                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
                                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
                                 <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a> -->
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -242,6 +268,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script src="js/custom.js" type="text/javascript"></script>
 </body>
 
 </html>

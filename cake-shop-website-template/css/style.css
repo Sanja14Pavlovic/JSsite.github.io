@@ -313,3 +313,66 @@ h6,
     background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
+
+/* Custom css */
+.msgtype {
+    text-align: center;
+}
+.msgtype select{
+    padding: 10px;
+}
+.msgtype p{
+    font-weight: bold;
+}
+
+#radiotype{
+    display: block;
+    padding-left: 50px;
+}
+
+.eColor{
+    color: rgb(155, 40, 40);
+    padding-top: 10px;
+}
+.eHide{
+    display: none;
+}
+.eShow{
+    display: block;
+}
+.sColor{
+    color: green;
+    padding-top: 10px;
+    text-align: center;
+}
+.sHide{
+    display: none;
+}
+.sShow{
+    display: block;
+}
+.formspace{
+    padding-top:15px;
+}
+.activeCard{
+    background-color: #E88F2A !important;
+}
+#cakeList ul li {
+    padding: 6px 10px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+#cakeList ul li:hover{
+    background-color: #E88F2A !important;
+}
+#moreText{
+    display: none;
+}
+.clientText{
+    display: flex;
+    justify-content: space-around;
+}
+.clientActive{
+    display: flex;
+    justify-content: space-around;
+}
