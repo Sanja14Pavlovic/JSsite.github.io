@@ -43,16 +43,16 @@ document.querySelector("#navbarCollapse").innerHTML = writeMenu;
     //                     </div>
 
 
-    let footerText= ["123 Street, New York, USA", "nfo@example.com", "+012 345 67890"];
-    let footerBi= ["bi-geo-alt","bi-envelope-open","bi-telephone"]
-    var writeFooter= "";
-    for(let i=0;i<footerText.length; i++){
-        writeFooter+= `<div class="d-flex mb-2">
-                                <i class="bi ${footerBi[i]} text-primary me-2"></i>
-                                 <p class="mb-0">${footerText[i]}</p>
-                        </div>`
-    }
-    document.querySelector("#footerContact").innerHTML= writeFooter;
+    // let footerText= ["123 Street, New York, USA", "nfo@example.com", "+012 345 67890"];
+    // let footerBi= ["bi-geo-alt","bi-envelope-open","bi-telephone"];
+    // var writeFooter= "";
+    // for(let i=0;i<footerText.length; i++){
+    //     writeFooter+= `<div class="d-flex mb-2">
+    //                             <i class="bi ${footerBi[i]} text-primary me-2"></i>
+    //                              <p class="mb-0">${footerText[i]}</p>
+    //                     </div>`
+    // }
+    // document.querySelector("#footerContact").innerHTML= writeFooter;
 
 //Indeks
 if(path =="index.html" || path == ""){
@@ -103,7 +103,7 @@ if(path =="index.html" || path == ""){
     }
     document.querySelector("#customerExp").innerHTML = customersExpirience;
 
-    //Counter
+    // Counter
     // $('[data-toggle="counter-up counter"]').counterUp({
     //     delay: 5,
     //     time: 1500
@@ -199,28 +199,27 @@ if(path =="index.html" || path == ""){
 </div>
 </div>  */}
 
-let cusPic= ["testimonial-3.jpg", "testimonial-1.jpg", "testimonial-4.jpg", "testimonial-2.jpg"]
-let customerName= ["John", "Anna", "Sarah", "Michael"];
-let customerText= ["I love this place, this cakes are like haven for real!", "This is the place where I love to come to have good snack!", "This place is awesome, I love food, I love people there it's really quiet and relaxing, u could even study there!", "I won't say u anything, u should go and see by yourself! 10/10!!" ];
-var writeClients= "";
-for(let y=0; y<customerName.length; y++){
-    writeClients+= `<div class="col-5 bg-dark text-white border-inner p-4">
-    <div class="d-flex align-items-center mb-3">
-        <img class="img-fluid flex-shrink-0" src="img/${cusPic[y]}" style="width: 60px; height: 60px;">
-        <div class="ps-3">
-            <h4 class="text-primary text-uppercase mb-1">${customerName[y]}</h4>
-            <span>Profession</span>
-        </div>
-    </div>
-    <p class="mb-0">${customerText[y]}</p>
-    </div>
-    </div>`
-}
-document.querySelector("#customers").innerHTML=writeClients;
+// let cusPic= ["testimonial-3.jpg", "testimonial-1.jpg", "testimonial-4.jpg", "testimonial-2.jpg"]
+// let customerName= ["John", "Anna", "Sarah", "Michael"];
+// let customerText= ["I love this place, this cakes are like haven for real!", "This is the place where I love to come to have good snack!", "This place is awesome, I love food, I love people there it's really quiet and relaxing, u could even study there!", "I won't say u anything, u should go and see by yourself! 10/10!!" ];
+// var writeClients= "";
+// for(let y=0; y<customerName.length; y++){
+//     writeClients+= `<div class="col-5 bg-dark text-white border-inner p-4">
+//     <div class="d-flex align-items-center mb-3">
+//         <img class="img-fluid flex-shrink-0" src="img/${cusPic[y]}" style="width: 60px; height: 60px;">
+//         <div class="ps-3">
+//             <h4 class="text-primary text-uppercase mb-1">${customerName[y]}</h4>
+//             <span>Profession</span>
+//         </div>
+//     </div>
+//     <p class="mb-0">${customerText[y]}</p>
+//     </div>
+//     </div>`
+// }
+// document.querySelector("#customerS").innerHTML=writeClients;
 
 //Kontakt
 if(path == "contact.html"){
-
     //Regularni izrazi
     var regMail = /^[a-z]+([\.]?[a-z]*[\d]*)*\@[a-z]+([\.]?[a-z]+)*(\.[a-z]{2,3})+$/
     var regName = /^([A-Z][a-z]{2,10})\s([A-Z][a-z]{3,15})$/
